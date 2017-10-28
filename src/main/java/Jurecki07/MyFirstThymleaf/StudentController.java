@@ -1,4 +1,5 @@
-package com.example.demo;
+package Jurecki07.MyFirstThymleaf;
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,7 +11,7 @@ public class StudentController {
 
     @RequestMapping("/new_student")
     public String newStudent(Model model) {
-        model.addAttribute("grades", /* call the method on the Grade enum to get all the grades */);
+        model.addAttribute("grades", Grade.values());
         return "new_student";
     }
 
